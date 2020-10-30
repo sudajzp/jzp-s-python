@@ -19,7 +19,7 @@ print(x[1])
 
 输出的结果为x列表中的index为1，位置为2的元素:
 
-![图1.1](https://github.com/sudajzp/photos/blob/master/list1.png?raw=true)
+![图1.1](https://github.com/sudajzp/photos/blob/master/LIST/list1.png?raw=true)
 
 ### 1.2 LIST修改
 
@@ -32,7 +32,7 @@ print(x[1])
 ```
 输出结果为：
 
-![图1.2](https://github.com/sudajzp/photos/blob/master/list2.png?raw=true)
+![图1.2](https://github.com/sudajzp/photos/blob/master/LIST/list2.png?raw=true)
 
 #### 插入
 在列表中间插入其他元素可以使用`insert()`方法。该方法需要输入两个参数：索引（index）、想要插入的元素。格式如下：
@@ -41,7 +41,7 @@ print(x[1])
 
 例子见下图：
 
-![图1.3](https://github.com/sudajzp/photos/blob/master/list16.png?raw=true)
+![图1.3](https://github.com/sudajzp/photos/blob/master/LIST/list16.png?raw=true)
 
 如果想要扩展列表，在列表尾部插入元素，可以使用`append()`方法。该方法只需要一个输入参数：你想要追加的元素。格式如下：
 
@@ -49,7 +49,7 @@ print(x[1])
 
 比如我想在图1.3中的列表末尾依次插入1到4的数字，那么我们就可以使用for循环和`append()`的组合。
 
-![图片1.4](https://github.com/sudajzp/photos/blob/master/list17.png?raw=true)
+![图片1.4](https://github.com/sudajzp/photos/blob/master/LIST/list17.png?raw=true)
 
 #### 删除
 
@@ -57,11 +57,11 @@ print(x[1])
 
 `del list[index]`可以按索引在列表中查找元素并且删除元素。
 
-`list.remove(factor)`可以删除列表中的特定元素，并不需要知道元素的索引值。
+`list.remove(factor)`可以删除列表中的特定元素，并不需要知道元素的索引值，如果列表中有多个相同的元素，此操作只会删除第一个。
 
 注意：`pop()`是有返回值的，而其余方法并没有返回值。
 
-![图片1.5](https://github.com/sudajzp/photos/blob/master/list18.png?raw=true)
+![图片1.5](https://github.com/sudajzp/photos/blob/master/LIST/list18.png?raw=true)
 
 ## 2、分片
 列表的分片功能可以满足用户获取某个范围内的全部元素。格式为 `list[i : j]`其中i是起始索引，j为结束索引。分片中起始索引位置的值包含在获取的元素中，而结束索引不包含在获取的元素中。获取的元素个数等于结束索引的值减去起始索引的值。
@@ -71,13 +71,13 @@ print(x[1])
 
 `print(x[:2])`
 
-![图2.1](https://github.com/sudajzp/photos/blob/master/list3.png?raw=true)
+![图2.1](https://github.com/sudajzp/photos/blob/master/LIST/list3.png?raw=true)
 
 同样，结束索引也可以略写，因为获取范围是不包括结束索引的元素的，所以在获取范围覆盖到列表最末时，一般采用略写结束索引的方法。
 
 `print(x[2:])`
 
-![图2.2](https://github.com/sudajzp/photos/blob/master/list4.png?raw=true)
+![图2.2](https://github.com/sudajzp/photos/blob/master/LIST/list4.png?raw=true)
 
 ### 2.2 从尾开始的索引
 负索引：在读取列表数据时，如果列表内元素个数较大，而我们想要获取的索引位置比较偏后，那么用负索引比用正索引更加方便。负索引从‘-1’开始.
@@ -86,13 +86,13 @@ print(x[1])
 print(x[-3:-2])
 print(x[-2:])
 ```
-![图2.3](https://github.com/sudajzp/photos/blob/master/list5.png?raw=true)
+![图2.3](https://github.com/sudajzp/photos/blob/master/LIST/list5.png?raw=true)
 
 ### 2.3 按步长获取元素list[i:j:step]
 `print(x[::2])`
 i,j表示获取范围，2表示获取列表内元素使用的步长。
 
-![图2.4](https://github.com/sudajzp/photos/blob/master/list6.png?raw=true)
+![图2.4](https://github.com/sudajzp/photos/blob/master/LIST/list6.png?raw=true)
 
 ## 3 列表常用方法（只作简单介绍）
 
@@ -126,13 +126,13 @@ i,j表示获取范围，2表示获取列表内元素使用的步长。
 
 矩阵的乘法：可以相乘（图2.7）；列表不支持乘法（图2.8）。
 
-![图4.1](https://github.com/sudajzp/photos/blob/master/list8.png?raw=true)
+![图4.1](https://github.com/sudajzp/photos/blob/master/LIST/list8.png?raw=true)
 
-![图4.2](https://github.com/sudajzp/photos/blob/master/list10.png?raw=true)
+![图4.2](https://github.com/sudajzp/photos/blob/master/LIST/list10.png?raw=true)
 
-![图4.3](https://github.com/sudajzp/photos/blob/master/list7.png?raw=true)
+![图4.3](https://github.com/sudajzp/photos/blob/master/LIST/list7.png?raw=true)
 
-![图4.4](https://github.com/sudajzp/photos/blob/master/list9.png?raw=true)
+![图4.4](https://github.com/sudajzp/photos/blob/master/LIST/list9.png?raw=true)
 
 ## 附录：列表使用进阶(部分)
 
@@ -147,16 +147,16 @@ f(x)是任意对x的有效操作，x可以是任意列表能够存储的类型�
 
 结果为：
 
-![附录1](https://github.com/sudajzp/photos/blob/master/list12.png?raw=true)
+![附录1](https://github.com/sudajzp/photos/blob/master/LIST/list12.png?raw=true)
 
 使用列表生成式还可以初始化一个二维列表：
 
-![附录2](https://github.com/sudajzp/photos/blob/master/list11.png?raw=true)
+![附录2](https://github.com/sudajzp/photos/blob/master/LIST/list11.png?raw=true)
 
 #### copy()操作的意义
 由于列表的特殊性，将同一个列表赋值给不同的变量名，该变量名对应的列表指向同一个存储地址。如果我们改变了其中一个，那么其他指向该列表的值也会被更改，原因是改动操作的执行对象是存储地址中的列表。实例见附录3。
 
-![附录3](https://github.com/sudajzp/photos/blob/master/list13.png?raw=true)
+![附录3](https://github.com/sudajzp/photos/blob/master/LIST/list13.png?raw=true)
 
 我更改了y中的一个元素，z中的元素也同步更改了。
 
@@ -164,10 +164,22 @@ f(x)是任意对x的有效操作，x可以是任意列表能够存储的类型�
 
 #### zip()、enumerate()
 
-zip():两个列表从第一个元素开始，对应位置的元素合并成一个元组，多余部分删除，返回一个组合好的打包对象。zip()需要我们有list()函数转换回列表。
+`zip()`两个列表从第一个元素开始，对应位置的元素合并成一个元组，多余部分删除，返回一个组合好的打包对象。zip()需要我们有list()函数转换回列表。
 
-![附录4](https://github.com/sudajzp/photos/blob/master/list14.png?raw=true)
+![附录4](https://github.com/sudajzp/photos/blob/master/LIST/list14.png?raw=true)
 
-enumerate():将列表内元素按顺序编写序号，起始序号可以自定义。序号与元素组成一个元组，最终返回一个枚举对象，同样需要用list()函数转换回列表。
+`enumerate()`将列表内元素按顺序编写序号，起始序号可以自定义。序号与元素组成一个元组，最终返回一个枚举对象，同样需要用list()函数转换回列表。
 
-![附录5](https://github.com/sudajzp/photos/blob/master/list15.png?raw=true)
+![附录5](https://github.com/sudajzp/photos/blob/master/LIST/list15.png?raw=true)
+
+#### 字符串与列表-join与split
+
+`str.join(list)`用于将列表内元素按照指定的字符连接成一个新的字符串。见附录6.
+
+![附录6](https://github.com/sudajzp/photos/blob/master/LIST/list19.png?raw=true)
+
+`str.split(str = '', num)`可以通过指定分隔符对字符串进行切片，num默认为-1，即分隔所有。num有指定值时，则分隔num次，分出num+1个子字符串。输出结果用列表存储。见附录7
+
+![附录7](https://github.com/sudajzp/photos/blob/master/LIST/list20.png?raw=true)
+
+

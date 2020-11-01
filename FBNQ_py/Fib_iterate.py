@@ -2,7 +2,7 @@
 '''
 斐波那契数列-迭代器
 '''
-class Fibonacci():
+class Fibonacci:
     def __init__(self, n):
         self.n = n
         self.current = 0

@@ -16,11 +16,16 @@ class Number():
                 self.num -= num_list[i]
         print(''.join(roman_list))
 
+def judge_num(n):
+    while True:
+        if n.isdigit():
+            n = int(n)
+            return n
+        else:
+            n = input('请输入有效的正整数:')
+            return judge_num(n)
+
 if __name__ == '__main__':
     n = input('请输入您想要查找的数字：')
-    if n.isdigit():
-        n = int(n)      # 将输入化为整数型
-        num = Number(n)
-        num.transform()
-    else:
-        print('请输入有效的正整数')
+    num = Number(judge_num(n))
+    num.transform()

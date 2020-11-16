@@ -4,7 +4,6 @@
 概率分布
 '''
 import numpy as np
-import scipy
 from scipy import stats
 import matplotlib.pyplot as plt
 from pylab import mpl
@@ -23,6 +22,9 @@ class Sample:
         plt.xlabel('随机变量：X')
         plt.ylabel('概率\密度')
         plt.show()
+
+    def hist(self, P):
+        plt.hist()
 
     def bernoulli(self, p):
         P = stats.bernoulli.pmf(self.X, p)          # 生成self.X的概率列表：离散型用pmf,连续性用pdf
@@ -72,15 +74,15 @@ class Sample:
 
 if __name__ == "__main__":
     x = Sample(0, 10, 1)
-    # x = Sample(-5, 6, 0.1)
+    # x = Sample(-5, 6, 0.01)
     # x = Sample(0, 1, 0.01)
     # x = Sample(0, 20, 0.1)
     # P = x.norm(0, 1)
     # P = x.bernoulli(0.4)
     # P = x.poisson(3)
-    # P = x.binom(20, 0.2)
+    P = x.binom(20, 0.2)
     # P = x.gamma(10, 1/2)
-    P = x.hypergeom(30, 20, 10)
+    # P = x.hypergeom(30, 20, 10)
     x.plot(P)
 
     # print(x.norm(0, 1))

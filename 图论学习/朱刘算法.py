@@ -22,7 +22,6 @@ def zhuliu(edges, n, m, root):#root：根节点
                 #非对角线并且权重比已记录的长度小
                 pre[edges[i].v] = edges[i].u#记录父节点
                 inderee[edges[i].v] = edges[i].w#更新最小权重
-        print(inderee,pre)
         # 有孤立点，不存在最小树形图
         for i in range(n):
             if i != root and inderee[i] == INF:#不是根节点并且没有入边
@@ -70,10 +69,24 @@ def zhuliu(edges, n, m, root):#root：根节点
 
 INF = 9999999999
 if __name__ == '__main__':
-    n, m, root = list(map(int, input().split()))
+    n, m, root = [7, 15, 1]
     edges = []
-    for i in range(m):
-        u, v, w = list(map(int, input().split()))
-        # 输入的点是1开始的，-1改为0开始的
+    list = [[1, 2, 9],
+            [1, 4, 6],
+            [2, 5, 3],
+            [2, 3, 10],
+            [3, 1, 3],
+            [3, 6, 5],
+            [4, 3, 4],
+            [5, 2, 6],
+            [5, 3, 8],
+            [5, 6, 9],
+            [5, 7, 6],
+            [6, 7, 4],
+            [6, 4, 3],
+            [7, 5, 4],
+            [7, 6, 8]]
+    for u, v, w in list:
         edges.append(Edge(u-1, v-1, w))
-    print(zhuliu(edges, n, m, root-1),end = "")
+    print(f"最小树形图的权重之和为：{zhuliu(edges, n, m, root-1)}", end = '')
+
